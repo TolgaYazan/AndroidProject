@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">  <!-- vertical Linearlayout -->
+
+    <!-- horizontal linearlayout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <!-- textview, in order to see given number -->
+        <TextView
+            android:id="@+id/ınputView"
+            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:hint="Enter a number"/>
+
+        <!-- textview, in order to see result after calculation  -->
+        <TextView
+            android:id="@+id/resultView"
+            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:hint="Result"/>
+    </LinearLayout>
+
+    <!-- horizontal Linarlayout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <!-- textview, in order to last calculation -->
+        <TextView
+            android:id="@+id/calculationView"
+            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:hint="Calculations"/>
+
+    </LinearLayout>
+
+    <!-- tablelayout, in order to provide keyboard -->
+    <TableLayout
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- button, to get the number 1 from the user -->
+        <Button
+            android:id="@+id/oneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="1"
+            android:onClick="onOne"
+            android:backgroundTint="#2A8585"/>
+
+            <!-- button, to get the number 2 from the user -->
+            <Button
+                android:id="@+id/twoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="2"
+                android:onClick="onTwo"
+                android:backgroundTint="#2A8585"
+                />
+
+            <!-- button, to get the number 3 from the user -->
+            <Button
+                android:id="@+id/threeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="3"
+                android:onClick="onThree"
+                android:backgroundTint="#2A8585"
+                />
+
+            <!-- button, to get the number 4 from the user -->
+            <Button
+                android:id="@+id/fourButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2A8585"
+                android:onClick="onFour"
+                android:text="4"
+                android:textSize="15dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <!-- button, to get the number 5 from the user -->
+            <Button
+                android:id="@+id/fiveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2A8585"
+                android:onClick="onFive"
+                android:text="5"
+                android:textSize="15dp" />
+
+            <!-- button, to get the number 6 from the user -->
+            <Button
+                android:id="@+id/sixButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2A8585"
+                android:onClick="onSix"
+                android:text="6"
+                android:textSize="15dp" />
+
+
+            <!-- button, to get the number 7 from the user -->
+            <Button
+                android:id="@+id/sevenButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2A8585"
+                android:onClick="onSeven"
+                android:text="7"
+                android:textSize="15dp" />
+
+            <!-- button, to get the number 8 from the user -->
+            <Button
+                android:id="@+id/eightButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2A8585"
+                android:onClick="onEight"
+                android:text="8"
+                android:textSize="15dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <!-- button, to get the number 9 from the user -->
+            <Button
+                android:id="@+id/nineButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="9"
+                android:onClick="onNine"
+                android:backgroundTint="#2A8585"/>
+
+            <!-- button, to get the number 0 from the user -->
+            <Button
+                android:id="@+id/zeroButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="#2A8585"
+                android:onClick="onZero"
+                android:text="0"
+                android:textSize="15dp" />
+
+            <!-- button, to make add operation with onAdd method -->
+            <Button
+                android:id="@+id/addButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2A8585"
+                android:onClick="onAdd"
+                android:text="+"
+                android:textSize="15dp" />
+
+            <!-- button, to make sub operation with onSub method -->
+            <Button
+                android:id="@+id/subButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2A8585"
+                android:onClick="onSub"
+                android:text="-"
+                android:textSize="15dp" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <!-- button, to make divide operation with onDiv method -->
+            <Button
+                android:id="@+id/divButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="/"
+                android:onClick="onDiv"
+                android:backgroundTint="#2A8585"
+                />
+
+            <!-- button, to make multiply operation with onMul method -->
+            <Button
+                android:id="@+id/mulButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="x"
+                android:onClick="onMul"
+                android:backgroundTint="#2A8585"
+                />
+
+            <!-- button, to calculate faktorial of given number  with onFac method -->
+            <Button
+                android:id="@+id/facButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="fac"
+                android:onClick="onFac"
+                android:backgroundTint="#2A8585"
+                />
+
+            <!-- button, to understand given number prime or not with onPrime method -->
+            <Button
+                android:id="@+id/primeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="prime"
+                android:onClick="onPrime"
+                android:backgroundTint="#2A8585"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <!-- button, to make reset inputs with onResetInput method -->
+            <Button
+                android:id="@+id/resetInputButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="CE"
+                android:onClick="onResetInput"
+                android:backgroundTint="#2A8585"
+                />
+
+            <!-- button, to make reset inputs and result with onResetAll method -->
+            <Button
+                android:id="@+id/resetAllButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="C"
+                android:onClick="onResetAll"
+                android:backgroundTint="#2A8585"
+                />
+
+            <!-- button, to make delete  last given input char  with onDelete method -->
+            <Button
+                android:id="@+id/deleteAllButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="DEL"
+                android:onClick="onDelete"
+                android:backgroundTint="#2A8585"
+                />
+
+            <!-- button, to proive double numbers inputs with  onPoint method -->
+            <Button
+                android:id="@+id/pointAllButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="."
+                android:onClick="onPoint"
+                android:backgroundTint="#2A8585"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        <!-- button, to make reset inputs with onResetInput method -->
+        <Button
+            android:id="@+id/odevInputButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="odev"
+            android:onClick="onOdevInput"
+            android:backgroundTint="#2A8585"
+            />
+        </TableRow>
+
+    </TableLayout>
+
+
+
+
+</LinearLayout>
